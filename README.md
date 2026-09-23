@@ -12,6 +12,7 @@
 | Verifiers | 机器闸 | `scripts/gates/*.mjs` + 消费方 `facts.json` |
 | 同构自测 | 翻车升规则 | `make gates-selftest` + `scripts/gates/fixtures/` |
 | Agent 协议 | 少上下文、可验收 | `templates/AGENTS.md`、`docs/SESSION_PROTOCOL.md` |
+| Overnight | 无人值守长跑：谓词、隔离、决策日志、逃生 | `docs/OVERNIGHT.md`（不替代 gates） |
 
 Skill / 提示词只提醒安装；**墙是 exit code**。
 
@@ -23,6 +24,7 @@ Skill / 提示词只提醒安装；**墙是 exit code**。
 4. 可选：`docs/APPLY_MAP.md`、`docs/CONTEXT_PLAYBOOK.md`、`templates/agent-progress.md` → `agent-progress.md`。
 5. Makefile 增加 `gates` / `gates-selftest`；CI 用 `.github/workflows/deliverable-gates.yml`。
 6. 约定：未过 gates 不得宣称文档/方案完成；完成 = 合并 PR / 关 Issue / STATUS 一行；聊天不算交付。
+7. 过夜 / 无人值守长跑：拷贝 `docs/OVERNIGHT.md`，用 `templates/OVERNIGHT_ISSUE.md` 开单；决策记 `evidence/overnight-<slug>/decisions.tsv`。只推 PR，不自动合并。
 
 ## 一边用一边改
 
@@ -40,4 +42,5 @@ make gates
 
 ## 版本
 
-v0.1 — 从 mushroom-farm-platform 门禁/协议抽出并去业务化；首个消费者为食用菌平台仓。
+v0.2 — Overnight / 无人值守长跑工单协议（`docs/OVERNIGHT.md`）。编排层；退出码门禁仍在 `scripts/gates`。
+v0.1 — 交付门禁、会话协议与看板监督去业务化，供各消费仓拷贝。

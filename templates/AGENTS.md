@@ -15,6 +15,7 @@
 - 默认少给；需要时再读文件
 - 独立结论用新会话/子 agent；主会话只收摘要
 - 完成 = 测试/gates/PR，不是自评
+- 过夜长跑：`docs/OVERNIGHT.md`（谓词验收；决策记 `evidence/overnight-<slug>/decisions.tsv`）
 
 ## 禁止
 - 文件名/标题用「独立/好看/完美」等元词

@@ -1,0 +1,4 @@
+time	phase	decision	reason	evidence	result
+2026-09-22T22:14:00Z	predicate	继续	谓词第 2 条未勾选	evidence/overnight-sample/predicate.md	open
+2026-09-22T23:02:00Z	change	丢弃补丁	验收命令对真实产物退出码非 0	evidence/overnight-sample/verify.log	reverted
+2026-09-23T00:40:00Z	escape	停止并开 PR	同一失败连续两轮没有新证据	evidence/overnight-sample/decisions.tsv	pr-open-not-merged
