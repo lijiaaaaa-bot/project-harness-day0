@@ -1,0 +1,53 @@
+name: Overnight 长跑工单
+description: 无人值守长跑。完成看可检查谓词，不看时长。只开 PR，不自动合并。
+title: "[overnight] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        协议见 `docs/OVERNIGHT.md`。这是编排协议，不替代 `scripts/gates` 的退出码门禁。
+        决策日志：`evidence/overnight-<slug>/decisions.tsv`（列 time、phase、decision、reason、evidence、result）。
+        卡住则停止并写原因，推 PR，不自动合并，不放宽谓词。
+  - type: textarea
+    id: mission
+    attributes:
+      label: Mission
+      description: 一句话：本轮要留下的可检查结果。
+      placeholder: 为某条验收补上可复现命令，并把真实输出放进 PR。
+    validations:
+      required: true
+  - type: textarea
+    id: predicate
+    attributes:
+      label: Predicate checklist
+      description: 每条必须可勾选、可复核。时长和轮次不是完成。
+      placeholder: |
+        - [ ] 指定命令退出码为 0，输出已入库
+        - [ ] 约定文件存在且与规格一致
+    validations:
+      required: true
+  - type: textarea
+    id: isolation
+    attributes:
+      label: Isolation + permissions
+      description: 分支或 worktree、允许改的路径、禁止的操作。
+      placeholder: |
+        - 分支：overnight/<slug>
+        - 允许：
+        - 禁止：自动合并、放宽谓词、改允许路径以外的文件
+    validations:
+      required: true
+  - type: textarea
+    id: nongoals
+    attributes:
+      label: Non-goals
+      description: 本轮明确不做的事。
+    validations:
+      required: true
+  - type: textarea
+    id: proof
+    attributes:
+      label: Proof
+      description: 用什么真实产物证明谓词成立（命令输出、测试、diff、文件）。聊天不算证明。
+    validations:
+      required: true

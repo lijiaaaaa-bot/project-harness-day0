@@ -7,3 +7,4 @@
 5. Makefile：`gates` → `node scripts/gates/run-all.mjs`；可选 `gates-selftest`。
 6. CI：消费仓跑 `run-all.mjs`；本 harness 仓跑 `selftest.mjs`。
 7. 翻车漏报：先改本 harness 的规则 + fixture，再升消费仓拷贝版本。
+8. 过夜工单（可选）：拷贝 `docs/OVERNIGHT.md`、`templates/OVERNIGHT_ISSUE.md`；把 `templates/github/ISSUE_TEMPLATE/overnight_task.yml` 放到消费仓 `.github/ISSUE_TEMPLATE/`。

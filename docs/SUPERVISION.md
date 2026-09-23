@@ -4,3 +4,4 @@
 - Issue/STATUS 只写具体验收与怎么推；不写口号、「不做」清单（范围否定若需要，放正式 docs 一次）。
 - 低风险、用户已要求的墙/CI/文档闸 PR：代理合并后用一行说明影响即可（项目可另定授权）。
 - 边界靠硬代码与 CI（contracts、lint、gates），不靠 Issue 散文。
+- 过夜 / 无人值守长跑按 [`OVERNIGHT.md`](./OVERNIGHT.md)：谓词可检查、隔离分支、决策 TSV、卡住即停。只推 PR，不自动合并。不替代 gates。
