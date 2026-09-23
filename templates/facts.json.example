@@ -1,0 +1,22 @@
+{
+  "project_name": "<填产品名>",
+  "facts": [
+    {
+      "id": "example_scale",
+      "text": "<需求原文里的规模，如 N 路设备>",
+      "must_appear_as_fact_keywords": ["<关键词1>", "<关键词2>"]
+    }
+  ],
+  "forbidden_name_substrings": [
+    "独立",
+    "independent",
+    "好看",
+    "漂亮",
+    "完美",
+    "最终版",
+    "防幻觉",
+    "高质量方案"
+  ],
+  "json_samples": [],
+  "doc_globs": ["docs/**/*.md", "*.md"]
+}
